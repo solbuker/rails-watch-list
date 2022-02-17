@@ -1,0 +1,13 @@
+<div class='container'>
+  <div class='box'>
+      <h1>Lists</h1>
+  <ul class = 'list'>
+    <%@lists.each do |list|%>
+      <li><%= link_to list.name, list_path(list)%></li>
+    <%end%>
+  </ul>
+    <div class='button'>
+      <%= link_to "Add new list", new_list_path, class: "buttontxt" %>
+  </div>
+  </div>
+</div>
