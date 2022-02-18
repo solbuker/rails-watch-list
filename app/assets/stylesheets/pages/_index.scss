@@ -13,12 +13,12 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -49,16 +49,52 @@ li{
   margin: 7px;
 }
 
-.list{
-  display:flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+// .list{
+//   display:flex;
+//   justify-content: space-around;
+//   flex-wrap: wrap;
+// }
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  width: 90vw;
 }
 
-.title{
-  justify-content: center;
-  text-align: center;
-  padding: 25px;
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .box {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .box {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .box {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .box {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .btn-ghost {
@@ -74,9 +110,10 @@ li{
   font-weight: 700;
   line-height: 1.5;
   margin: 5px;
-  max-width: 180px;
-  min-height: 44px;
-  min-width: 10px;
+  width: 180px;
+  height: 40px;
+  // min-height: 44px;
+  // min-width: 10px;
   outline: none;
   overflow: hidden;
   padding: 9px 20px 8px;
@@ -95,11 +132,13 @@ li{
 .title {
   color: #111;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 75px;
+  font-size: 65px;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 2;
   text-align: center;
+  justify-content: center;
+  padding: 25px;
 }
 
 .navbar-lewagon {
@@ -107,6 +146,7 @@ li{
   background: #0A0A11;
   position: sticky;
   top: 0;
+  height: 60px;
 }
 
 a.nav-link{
